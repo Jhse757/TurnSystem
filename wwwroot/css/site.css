@@ -19,4 +19,73 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #FAFAFA;
 }
+
+/* Clases para las imagenes */
+
+.img-size-home {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+
+/* Clases para las cards */
+
+.card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.card-item{
+  width: 18rem;
+}
+
+/* Clases para los botones*/
+
+.btn {
+  font-weight: bold;
+  border-radius: 3rem;
+  margin:  5px 5px 5px 5px;
+  padding-inline: 30px;  
+}
+
+.OptionCrud {
+  cursor: pointer;
+  transition: ease 0.5s;
+  width: 2em;
+  height: 2em;
+  filter:grayscale();
+}
+
+.OptionCrud:hover {
+  transform: scale(1.08); 
+  transition: transform 0.2s ease, background-color 0.5s ease;
+  filter: none;
+}
+
+.Etiquetas {
+  background-color: #258cfb;
+}
+
+/* Clases para los formularios */
+
+.form-control {
+  border-radius: 25px;
+}
+
+.from-text-area {
+  height: 100px;
+}
+
+.form-select {
+  border-radius: 25px;
+}
+
+/* Clases para los links */
+a {
+  text-decoration: none;
+}
+
