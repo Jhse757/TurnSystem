@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TurnSystem.Models;
 
 
 namespace TurnSystem.Data{
@@ -7,5 +8,11 @@ namespace TurnSystem.Data{
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options){}
 
         //aqui se deben registrar los modelos
+
+        public DbSet<Adviser> Advisers  {get; set;}
+        public DbSet<Shift> Shifts  {get; set;}
+        
+
+
     }
 }
