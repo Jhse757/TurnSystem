@@ -14,7 +14,7 @@ namespace TurnSystem.Data{
         public DbSet<Status> Status  {get; set;}
         public DbSet<Document> Documents  {get; set;}
         public DbSet<Procedure> Procedures   {get; set;}
-        public DbSet<TypeUser> TypeUsers   {get; set;}
+        public DbSet<Type_User> Type_Users   {get; set;}
         public DbSet<User> Users   {get; set;}
 
 
