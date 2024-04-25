@@ -46,7 +46,18 @@ body {
 
 .card-item{
   width: 18rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 16px;
+  cursor: pointer;
+}
+
 
 /* Clases para los botones*/
 
@@ -103,3 +114,8 @@ a {
  fill: #0D6EFD;
 }
  
+
+.logo-min {
+  width: 150px;
+  height: auto;
+}

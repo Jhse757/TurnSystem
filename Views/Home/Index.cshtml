@@ -3,100 +3,20 @@
 }
 
 @* Vista 1 *@
-@* <div class="container-fluid">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6 p-3 card text-center">
+ <div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 p-3 card d-flex justify-content-center align-items-center text-center">
+            <div class="row d-flex justify-content-center">
+                <img src="~/img/Logo_turnSystem.png" class="img-fluid logo-min" alt="">
+            </div>
             <div class="d-grid d-flex justify-content-center">
                 <img class="img-fluid img-size-home" src="~/svg/svg_1.svg" alt="" asp-append-version="true">
             </div>
             <h1 class="fw-bold text-primary">¡Bienvenid@s!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non interdum nisl. Quisque egestas, ipsum quis imperdiet sagittis, quam mauris rhoncus metus, ac accumsan neque dolor malesuada magna.</p>
             <div class="d-grid gap-2 d-md-block">
-                <a type="button" class="btn btn-primary mx-1" asp-controller="" asp-action="">Solicitar turno</a>
+                <a type="button" class="btn btn-primary mx-1" asp-controller="Home" asp-action="Type_Users">Solicitar turno</a>
             </div>
         </div>
-
-    </div>
-</div> *@
-
-@* Vista 2 *@
-<div class="container-fluid m-3">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6 p-3 card text-center">
-            <h1 class="fw-bold text-primary">¿Por favor seleciona un servicio</h1>
-            <div class="row d-flex justify-content-center m-3">
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><circle cx="9" cy="4" r="2"/><path d="M16.98 14.804A1 1 0 0 0 16 14h-4.133l-.429-3H16V9h-4.847l-.163-1.142A1 1 0 0 0 10 7H9a1.003 1.003 0 0 0-.99 1.142l.877 6.142A2.009 2.009 0 0 0 10.867 16h4.313l.839 4.196c.094.467.504.804.981.804h3v-2h-2.181z"/><path fill="#0D6EFD" d="M12.51 17.5c-.739 1.476-2.25 2.5-4.01 2.5A4.505 4.505 0 0 1 4 15.5a4.503 4.503 0 0 1 2.817-4.167l-.289-2.025C3.905 10.145 2 12.604 2 15.5C2 19.084 4.916 22 8.5 22a6.497 6.497 0 0 0 5.545-3.126l-.274-1.374z"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 1152 1792"><path d="M642 0q-78 0-132.5 55T455 188t54.5 132.5T642 375q79 0 133.5-54.5T830 188T775.5 55T642 0m-92 428q-24-52-88-56q-24-2-94-2q-159 5-286 205q-61 97-74.5 201T38 980l62 269l-75 406q-9 52 21.5 94t80.5 43q119 0 141-89l89-389q8-38 8-53t-9-56l-42-248l110-292q9 13 32.5 50t39.5 60t40 52.5t48.5 49.5t49.5 31q23 10 328 74q41 8 68.5-24t27.5-66q0-43-57-74l-288-82zm241 767q0-71 50.5-121t122.5-50q70 0 120.5 50t50.5 121l-2 554q0 18-12.5 30.5T1090 1792q-17 0-30-12.5t-13-30.5v-554q0-36-24-61t-59-25q-36 0-60.5 25t-24.5 61q0 18-13 30t-30 12q-18 0-31.5-12t-13.5-30"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Atención preferencial</h4>
-                </div>
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 32 32"><path fill="#0D6EFD" d="M10.5 16a5.5 5.5 0 1 0 0-11a5.5 5.5 0 0 0 0 11M23 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8M5 18a3 3 0 0 0-3 3v.15S2 27 10.5 27s8.5-5.85 8.5-5.85V21a3 3 0 0 0-3-3zm18 7c-1.456 0-2.608-.198-3.521-.513c.432-.7.68-1.375.82-1.92a6.391 6.391 0 0 0 .193-1.196c.002-.04.004-.076.004-.107l.001-.042V21a4.484 4.484 0 0 0-1.145-3h8.241A2.406 2.406 0 0 1 30 20.406S30 25 23 25"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Atención estandar</h4>
-                </div>
-            </div>
-            <div class="d-grid gap-2 d-md-block">
-                <a type="button" class="btn btn-primary mx-1" asp-controller="" asp-action="">Continuar</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-@* Vista 3 *@
-<div class="container-fluid m-3">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-6 p-3 card text-center">
-            <h1 class="fw-bold text-primary">¿Por favor seleciona un servicio</h1>
-            <div class="row d-flex justify-content-center m-3">
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Transcripciónes</h4>
-                </div>
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Citas</h4>
-                </div>
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Autorizaciones</h4>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center m-3">
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Examenes</h4>
-                </div>
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">PQRS</h4>
-                </div>
-                <div class="card col p-2 m-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 24 24"><path d="M10 21v-4H9q-.425 0-.712-.288T8 16v-6q0-1.25.875-2.125T11 7q1.25 0 2.125.875T14 10q.9.375 1.45 1.2T16 13v3q0 .425-.288.713T15 17h-2v4q0 .425-.288.713T12 22h-1q-.425 0-.712-.288T10 21m1-15q-.825 0-1.412-.587T9 4q0-.825.588-1.412T11 2q.825 0 1.413.588T13 4q0 .825-.587 1.413T11 6"/></svg>
-                    </span>
-                    <h4 class="fw-bold fs-5">Medicamentos</h4>
-                </div>            
-            </div>
-            <div class="d-grid gap-2 d-md-block">
-                <a type="button" class="btn btn-primary mx-1" asp-controller="" asp-action="">Continuar</a>
-            </div>
-        </div>
-
     </div>
 </div>
