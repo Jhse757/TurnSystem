@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TurnSystem.Models;
+using TurnSystem.Data;
 
 namespace TurnSystem.Controllers;
 
@@ -13,11 +14,38 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+// Muestra vista Index
+
+    // public async Task<IActionResult> Index()
+    // {
+    //     return View(await _logger.Type_Users.ToListAsync());
+    // }
+
+// Muestra vista Shift
+   public IActionResult Shift()
     {
         return View();
     }
 
+
+   public IActionResult Index()
+    {
+        return View();
+    }
+
+// Muestra vista Type_Procedure
+       public IActionResult Type_Procedures()
+    {
+        return View();
+    }
+
+// Muestra vista Type_users
+       public IActionResult Type_users()
+    {
+        return View();
+    }
+
+// Muestra vista Privacy
     public IActionResult Privacy()
     {
         return View();
