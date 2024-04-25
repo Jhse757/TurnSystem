@@ -719,23 +719,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\": {},
+    "C:\\Users\\dekla\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\TurnSystem.csproj",
+      "projectUniqueName": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
       "projectName": "TurnSystem",
-      "projectPath": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\TurnSystem.csproj",
-      "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\obj\\",
+      "projectPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
+      "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\WINDOWS 11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dekla\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -744,6 +744,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
