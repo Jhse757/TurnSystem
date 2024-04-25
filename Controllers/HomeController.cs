@@ -43,9 +43,9 @@ public class HomeController : Controller
     }
 
 // Muestra vista Type_Procedure
-       public IActionResult Type_Procedures()
+       public async Task<IActionResult> Type_Procedures()
     {
-        return View();
+        return View(await _logger.Type_Procedures.ToListAsync());
     }
 
 
