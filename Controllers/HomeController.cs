@@ -36,19 +36,34 @@ public class HomeController : Controller
     }
 
     // Muestra vista Type_users
-       public async Task<IActionResult> Type_Users()
-       
+    public async Task<IActionResult> Type_Users()
+    
     {
-       return View(await _logger.Type_Users.ToListAsync());
+    return View(await _logger.Type_Users.ToListAsync());
+    }
+    //aqui se guarda que tipo de usuario es
+[HttpPost]
+public IActionResult Type_Users_Selected(string description)
+    {
+        TempData["Type_Users_Selected"] = description;
+        TempData.Keep("Type_Users_Selected");
+        var Type_Users_Selected = new SelectedData();
+        return RedirectToAction("Type_Procedures");
     }
 
 // Muestra vista Type_Procedure
-       public IActionResult Type_Procedures()
-    {
-        return View();
+    public async Task<IActionResult> Type_Procedures(){
+        return View(await _logger.Type_Procedures.ToListAsync());
     }
+     //aqui se guarda que tipo de procedimiento requiere
 
-
+[HttpPost]
+public IActionResult Type_Procedures_Selected(string description)
+{
+    TempData["Type_Procedures_Selected"] = description;
+    TempData.Keep("Type_Procedures_Selected");
+    return RedirectToAction("Shift");
+}
 
 // Muestra vista Privacy
     public IActionResult Privacy()

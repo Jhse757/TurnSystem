@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cws+CoLXW/Xi3GVazCoY98Y8D51cGRQbeZvez1rGJ2SFdIGYD2cajzO5LWp/t62aBBVd4RXYYai+L2NhzSeF6A==",
+  "dgSpecHash": "AiBZKSsfUZaKxXQiz1UMF0RUj1jQ9dts704mdmQUpjZtYlu4LUUltIvKIzdSt5zcx/qxPRznWRvqu87E81eRKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
+  "projectFilePath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dekla\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\dekla\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
