@@ -2,14 +2,16 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TurnSystem.Models;
 using TurnSystem.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace TurnSystem.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly DataBaseContext _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(DataBaseContext logger)
     {
         _logger = logger;
     }
@@ -33,17 +35,20 @@ public class HomeController : Controller
         return View();
     }
 
-// Muestra vista Type_Procedure
-       public IActionResult Type_Procedures()
+    // Muestra vista Type_users
+       public async Task<IActionResult> Type_Users()
+       
     {
-        return View();
+       return View(await _logger.Type_Users.ToListAsync());
     }
 
-// Muestra vista Type_users
-       public IActionResult Type_users()
+// Muestra vista Type_Procedure
+       public async Task<IActionResult> Type_Procedures()
     {
-        return View();
+        return View(await _logger.Type_Procedures.ToListAsync());
     }
+
+
 
 // Muestra vista Privacy
     public IActionResult Privacy()
