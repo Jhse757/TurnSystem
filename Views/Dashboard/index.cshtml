@@ -31,9 +31,6 @@
                         <dt class="col-sm-2">Fecha</dt>
                         <dd class="col-sm-10">@firstShift.shift_date</dd>
 
-                        <dt class="col-sm-2">Paciente</dt>
-                        <dd class="col-sm-10">@firstShift.User?.name</dd>
-
                         <dt class="col-sm-2">Recepcionista</dt>
                         <dd class="col-sm-10">@firstShift.Adviser?.name</dd>
 
@@ -62,7 +59,7 @@
                         {
                             <tr>
                                 <td>@shift.shift_date</td>
-                                <td>@shift.User?.name</td>
+                                <td>@shift.User?.document_number</td>
                                 <td>@shift.Adviser?.name</td>
                                 <td>@shift.Type_Procedure?.description</td>
                                 <td>@shift.Status?.description</td>
