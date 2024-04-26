@@ -47,7 +47,6 @@ public IActionResult Type_Users_Selected(string description)
     {
         TempData["Type_Users_Selected"] = description;
         TempData.Keep("Type_Users_Selected");
-        var Type_Users_Selected = new SelectedData();
         return RedirectToAction("Type_Procedures");
     }
 
