@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/home/riwip5-021/TurnSystem/TurnSystem.csproj": {}
   },
   "projects": {
@@ -13,41 +12,14 @@
         "projectPath": "/home/riwip5-021/TurnSystem/TurnSystem.csproj",
         "packagesPath": "/home/riwip5-021/.nuget/packages/",
         "outputPath": "/home/riwip5-021/TurnSystem/obj/",
-=======
-    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
-        "projectName": "TurnSystem",
-        "projectPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
-        "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\obj\\",
->>>>>>> 052511e84cf0365de67b4b6d50397b07bc545a47
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
           "/home/riwip5-021/.nuget/NuGet/NuGet.Config"
-=======
-          "C:\\Users\\dekla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 052511e84cf0365de67b4b6d50397b07bc545a47
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-<<<<<<< HEAD
-=======
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
->>>>>>> 052511e84cf0365de67b4b6d50397b07bc545a47
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,11 +66,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
->>>>>>> 052511e84cf0365de67b4b6d50397b07bc545a47
         }
       }
     }
