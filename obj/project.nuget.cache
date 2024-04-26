@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "AALhrFo5IYUjLrE5NXN+S8xraGBLpmcS4tWwaVqhG487jr9pRcHZ1QICH2TBLkzIXo6NcfVQZChGmYU+Fx29AA==",
   "success": true,
   "projectFilePath": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\TurnSystem.csproj",
+=======
+  "dgSpecHash": "AiBZKSsfUZaKxXQiz1UMF0RUj1jQ9dts704mdmQUpjZtYlu4LUUltIvKIzdSt5zcx/qxPRznWRvqu87E81eRKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
+>>>>>>> 588dac1fc4ecb003f18d6ad2f42356a932df5eef
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",

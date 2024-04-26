@@ -2,8 +2,24 @@
     ViewData["Title"] = "Inicio";
 }
 
+@{
+    var Type_Users_Selected = TempData["Type_Users_Selected"] as string;
+    var Type_Procedures_Selected = TempData["Type_Procedures_Selected"] as string;
+    var Type_Users_Selected_id = TempData["Type_Users_Selected_id"] as int?;
+    var Document_number = TempData["Document_number"] as string;
+    var Type_Document_Selected = TempData["Type_Document_Selected"] as string;
+    var Type_Document_Selected_id = TempData["Type_Document_Selected_id"]  as int?;
+    var tipo_documento = TempData["Type_Document_Selected2"] as string;
+    
+
+}
+
+
+
+
+
 @* Vista turno cliente *@
- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-6 p-3 card d-flex justify-content-center align-items-center text-center">
             <div class="row d-flex justify-content-center">
@@ -16,16 +32,16 @@
             <fieldset disabled>
                 <form class="justify-content-center align-items-center border-bottom border-2 border-primary disabled">               
                     <h2 class=fs-6 mx-1">Tipo de documento:</h2>
-                    <h2 class="fw-bold fs-4 mx-1">Cedula</h2>
+                    <h2 class="fw-bold fs-4 mx-1">@tipo_documento</h2>
                     <h2 class="fs-6 mx-1">Numero de documento:</h2>
-                    <h2 class="fw-bold fs-4 mx-1">12345647</h2>
+                    <h2 class="fw-bold fs-4 mx-1">@Document_number</h2>
                 </form>
             </fieldset>
             <div class="d-flex-column justify-content-center align-items-center border-bottom border-2 border-primary my-3">               
                 <h2 class="fs-6 mx-1">Tipo de tramite:</h2>
-                <h2 class="fw-bold fs-4 mx-1">Autorizaciones</h2>
-                <h2 class="fs-6 mx-1">Tipo de atención: @ViewBag.Type_Users</h2>
-                <h2 class="fw-bold fs-4 mx-1">Atención general</h2>
+                <h2 class="fw-bold fs-4 mx-1">@Type_Procedures_Selected</h2>
+                <h2 class="fs-6 mx-1">Tipo de atención:</h2>
+                <h2 class="fw-bold fs-4 mx-1">@Type_Users_Selected</h2>
             </div>
                 <p class="fs-7 mx-1">Por favor, revisa en pantalla el módulo para ser atendido.</p>
         </div>

@@ -2,21 +2,28 @@
     ViewData["Title"] = "Inicio";
 }
 
+
+
+
 @* Vista tramites *@
  <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-6 p-3 card d-flex justify-content-center align-items-center text-center">
             <div class="row d-flex justify-content-center">
-                <img src="~/img/Logo_turnSystem.png" class="img-fluid logo-min" alt="">
+                <img src="~/img/Logo_TurnSystem.png" class="img-fluid logo-min" alt="">
             </div>
             <h1 class="fw-bold text-primary">Por favor seleciona un tramite</h1>
-            <div class="row justify-content-center align-items-center text-center m-3 gap-2">
-                @foreach(var item in Model){
-                    <a asp-action="Shift" asp-controller="Home" class="col card-item d-flex flex-column align-items-center justify-content-center p-2" data-id="@item.id">
-                        <img src="@item.icon" class="icon-item">
-                        <h2 class="fw-bold fs-5">@item.description</h2>
-                    </a>
-                }
+            <div class="row flex-md-row flex-column justify-content-center align-items-center text-center m-3 gap-2">
+                @foreach(var item in Model)
+                    {
+                        <form asp-action="Type_Procedures_Selected" asp-controller="Home" method="post" class="col card-item d-flex align-items-center justify-content-center p-2">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" style="background: none; border: none;">
+                                <img src="@item.icon"  class="icon-item" >
+                                <h2 class="fw-bold fs-5">@item.description</h2>
+                            </button>
+                        </form>
+                    }
             </div>
         </div>
     </div>

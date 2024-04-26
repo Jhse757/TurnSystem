@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\TurnSystem.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\TurnSystem.csproj",
         "packagesPath": "C:\\Users\\WINDOWS 11\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\WINDOWS 11\\Desktop\\TurnSystem\\obj\\",
+=======
+    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
+        "projectName": "TurnSystem",
+        "projectPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
+        "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\obj\\",
+>>>>>>> 588dac1fc4ecb003f18d6ad2f42356a932df5eef
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
