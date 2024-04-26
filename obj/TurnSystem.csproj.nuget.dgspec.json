@@ -1,24 +1,7 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/home/riwip5-021/TurnSystem/TurnSystem.csproj": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
-        "projectName": "TurnSystem",
-        "projectPath": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\TurnSystem\\obj\\",
-=======
-    "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj": {}
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
   },
   "projects": {
     "/home/riwip5-021/TurnSystem/TurnSystem.csproj": {
@@ -26,41 +9,17 @@
       "restore": {
         "projectUniqueName": "/home/riwip5-021/TurnSystem/TurnSystem.csproj",
         "projectName": "TurnSystem",
-<<<<<<< HEAD
         "projectPath": "/home/riwip5-021/TurnSystem/TurnSystem.csproj",
         "packagesPath": "/home/riwip5-021/.nuget/packages/",
         "outputPath": "/home/riwip5-021/TurnSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/riwip5-021/.nuget/NuGet/NuGet.Config"
-=======
-        "projectPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
-        "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\obj\\",
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-          "C:\\Users\\dekla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,11 +66,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
         }
       }
     }

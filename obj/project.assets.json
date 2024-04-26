@@ -719,16 +719,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "/home/riwip5-021/.nuget/packages/": {}
-=======
-    "C:\\Users\\User\\.nuget\\packages\\": {}
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "/home/riwip5-021/TurnSystem/TurnSystem.csproj",
       "projectName": "TurnSystem",
       "projectPath": "/home/riwip5-021/TurnSystem/TurnSystem.csproj",
@@ -737,16 +732,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/riwip5-021/.nuget/NuGet/NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
-      "projectName": "TurnSystem",
-      "projectPath": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\TurnSystem\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -798,11 +783,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
       }
     }
   }
