@@ -1,18 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Inicio";
+    var Type_Procedures_Selected = TempData["Type_Procedures_Selected"] as string;
+    var Type_Users_Selected = TempData["Type_Users_Selected"] as string;
 }
-
-@{
-    var Type_Users_Selected = TempData["Type_Users_Selected"] as string;}
-    
-
-@{
-    var Type_Procedures_Selected = TempData["Type_Procedures_Selected"] as string;}
-
-
-
-
-
 
 @* Vista turno cliente *@
 <div class="container-fluid">
