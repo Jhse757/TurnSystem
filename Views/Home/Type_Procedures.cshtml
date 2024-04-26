@@ -2,6 +2,8 @@
     ViewData["Title"] = "Inicio";
 }
 
+
+
 @* Vista tramites *@
  <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
@@ -10,14 +12,22 @@
                 <img src="~/img/Logo_turnSystem.png" class="img-fluid logo-min" alt="">
             </div>
             <h1 class="fw-bold text-primary">Por favor seleciona un tramite</h1>
-            <div class="row justify-content-center align-items-center text-center m-3 gap-2">
-                @foreach(var item in Model){
-                    <a asp-action="Shift" asp-controller="Home" class="col card-item d-flex flex-column align-items-center justify-content-center p-2">
-                        <img src="@item.icon" class="icon-item">
-                        <h2 class="fw-bold fs-5">@item.description</h2>
-                    </a>
+            <div class="row d-flex justify-content-center m-3 gap-2">
+                @foreach(var procedure in Model)
+                {
+                    <form asp-action="Type_Procedures_Selected" asp-controller="Home" method="post">
+                        <input type="hidden" name="description" value="@procedure.description" />
+                        <div class="card-item col p-2" style="cursor: pointer;" onclick="this.closest('form').submit();">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-item" viewBox="0 0 512 512"><path d="M428 224H288a48 48 0 0 1-48-48V36a4 4 0 0 0-4-4h-92a64 64 0 0 0-64 64v320a64 64 0 0 0 64 64h224a64 64 0 0 0 64-64V228a4 4 0 0 0-4-4m-92 160H176a16 16 0 0 1 0-32h160a16 16 0 0 1 0 32m0-80H176a16 16 0 0 1 0-32h160a16 16 0 0 1 0 32"/><path fill="#0D6EFD" d="M419.22 188.59L275.41 44.78a2 2 0 0 0-3.41 1.41V176a16 16 0 0 0 16 16h129.81a2 2 0 0 0 1.41-3.41"/></svg>
+                            </span>
+                            <h2 class="fw-bold fs-5">@procedure.description</h2>
+                        </div>
+                    </form>
                 }
+
             </div>
+            
         </div>
     </div>
 </div>
