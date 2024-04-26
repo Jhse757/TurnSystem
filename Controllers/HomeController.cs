@@ -64,6 +64,10 @@ public IActionResult Type_Procedures_Selected(string description)
     return RedirectToAction("Shift");
 }
 
+//controlador para vista de cedula y usuario
+public async Task<IActionResult> Type_Documents(){
+    return View( await _logger.Type_Documents.ToListAsync());
+}
 // Muestra vista Privacy
     public IActionResult Privacy()
     {
