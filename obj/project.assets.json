@@ -719,32 +719,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dekla\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
       "projectName": "TurnSystem",
       "projectPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
       "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
+      "projectName": "TurnSystem",
+      "projectPath": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\TurnSystem\\obj\\",
+>>>>>>> 6ebe2cbda5a1536e6b423a3cd0e0382871baa1ac
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dekla\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -796,7 +796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
