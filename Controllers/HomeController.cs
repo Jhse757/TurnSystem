@@ -43,8 +43,10 @@ public class HomeController : Controller
     }
     //aqui se guarda que tipo de usuario es
 [HttpPost]
-public IActionResult Type_Users_Selected(string description)
-    {
+public IActionResult Type_Users_Selected(string description, int id)
+    {   
+        TempData["Type_Users_Selected_id"] = id;
+        TempData.Keep("Type_Users_Selected_id");
         TempData["Type_Users_Selected"] = description;
         TempData.Keep("Type_Users_Selected");
         return RedirectToAction("Type_Procedures");
@@ -68,6 +70,18 @@ public IActionResult Type_Procedures_Selected(string description)
 public async Task<IActionResult> Type_Documents(){
     return View( await _logger.Type_Documents.ToListAsync());
 }
+
+[HttpPost]
+public IActionResult Type_Document_Selected(string description, int id, string document)
+    {   
+        TempData["Type_Document_Selected_id"] = id;
+        TempData.Keep("Type_Document_Selected_id");
+        TempData["Type_Document_Selected2"] = description;
+        TempData.Keep("Type_Document_Selected");
+        TempData["Document_number"] = document;
+        TempData.Keep("Document_number");
+        return RedirectToAction("Type_users");
+    }
 // Muestra vista Privacy
     public IActionResult Privacy()
     {

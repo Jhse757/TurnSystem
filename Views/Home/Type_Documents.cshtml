@@ -6,17 +6,18 @@
             </div>
             <h1 class="fw-bold text-primary">¿Que tipo de Documento tienes?</h1>
             <div class="row d-flex justify-content-center m-3 gap-2">
-                @foreach(var item in Model)
-                    {
-                        <form asp-action="Type_Users_Selected" asp-controller="Home" method="post">
-                            <input type="hidden" name="description" value="@item.description" />
-                            <button type="submit" class="card-item col p-2" style="background: none; border: none;">
-                                
-                
-                                <h2 class="fw-bold fs-5">@item.description</h2>
-                            </button>
-                        </form>
-                    }
+               <form asp-action="Type_Document_Selected" asp-controller="Home" method="post">
+                            <select name="description" class="form-select" aria-label="Default select example">
+                                <option selected>selecciona una opcion</option>
+                                @foreach(var document in Model){
+                                    <option value="@document.description">@document.description</option>
+                                }
+                                </select>
+                            <br>
+                            <input type="text" name="document" class="form-input">
+                            <br>
+                            <button type="submit" class="btn btn-primary" > continuar</button>
+                </form>
             </div>
         </div>
     </div>
