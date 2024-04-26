@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TurnSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e2ea0e74e4d4c634c93add1c6db64c44200f3bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1f29fd971ab24769dc9b20592b1192a4c871f17")]
 [assembly: System.Reflection.AssemblyProductAttribute("TurnSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TurnSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
