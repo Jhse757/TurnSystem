@@ -1,50 +1,32 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj": {}
+    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj": {
+    "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
+        "projectUniqueName": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
         "projectName": "TurnSystem",
-        "projectPath": "C:\\Users\\User\\Documents\\TurnSystem\\TurnSystem.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\TurnSystem\\obj\\",
-=======
-    "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
-        "projectName": "TurnSystem",
-        "projectPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\TurnSystem.csproj",
+        "projectPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\TurnSystem.csproj",
         "packagesPath": "C:\\Users\\dekla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dekla\\Documents\\c#\\Nueva carpeta\\nuevo proyecto\\TurnSystem\\obj\\",
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
+        "outputPath": "C:\\Users\\dekla\\Desktop\\proyecto\\TurnSystem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
           "C:\\Users\\dekla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-<<<<<<< HEAD
-=======
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
->>>>>>> f1f29fd971ab24769dc9b20592b1192a4c871f17
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
