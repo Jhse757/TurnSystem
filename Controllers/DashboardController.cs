@@ -54,5 +54,38 @@ public class DashboardController : Controller
         // Redirigir de vuelta al Dashboard
         return RedirectToAction("Index");
     }
+    [HttpPost]
+    public async Task<IActionResult> CallFirstShift()
+    {
+        // Obtener el primer turno que está en proceso ordenado por la fecha
+        var firstShift = await _context.Shifts
+            .Include(s => s.Status)
+            .Include(s => s.Adviser)
+            .OrderBy(s => s.shift_date)
+            .FirstOrDefaultAsync(s => s.Status.description == "En proceso");
+
+        if (firstShift != null)
+        {
+            // Cambiar el estado del turno a "Atendiendo"
+            firstShift.Status.description = "Atendiendo";
+
+            // Asignar el módulo correspondiente al turno según el recepcionista
+            if (firstShift.Adviser != null)
+            {
+                firstShift.Adviser.Modulo = firstShift.Adviser.Modulo; // Esto ya está definido en `Adviser`
+            }
+
+            // Guardar los cambios en la base de datos
+            await _context.SaveChangesAsync();
+
+            // Return the updated firstShift object
+            return Ok(firstShift);
+        }
+
+        // If firstShift is null, return a NotFound response
+        return NotFound();
+    }
+
+
 
 }

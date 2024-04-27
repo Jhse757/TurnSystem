@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
 <div class="container-fluid">
     <div class="row">
         <!-- Barra lateral izquierda -->
@@ -45,28 +44,12 @@
                     <div class="col">
                         <!-- Utiliza una fila para organizar los botones -->
                         <div class="row">
-                            <!-- Botón 1 -->
                             <div class="col">
-                                <form method="post" asp-action="Action1">
-                                    <button type="submit" class="btn btn-primary">Siguiente</button>
-                                </form>
-                            </div>
-
-                            <!-- Botón 2 -->
-                            <div class="col">
-                                <form method="post" asp-action="Action2">
-                                    <button type="submit" class="btn btn-secondary">Atender</button>
-                                </form>
-                            </div>
-
-                            <!-- Botón 3 -->
-                            <div class="col">
-                                <form method="post" asp-action="Action3">
+                                <form method="post" asp-action="CallFirstShift">
                                     <button type="submit" class="btn btn-success">Llamar</button>
                                 </form>
                             </div>
 
-                            <!-- Botón 4 -->
                             <div class="col">
                                 <form method="post" asp-action="DeleteFirstRecord">
                                     <button type="submit" class="btn btn-danger">Finalizar</button>
