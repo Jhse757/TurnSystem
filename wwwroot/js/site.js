@@ -3,3 +3,9 @@
 
 // Write your JavaScript code.
 
+function recibir() {
+    let numero_documento = document.getElementById("numero_documento").value;
+    let numero_documento2 = document.getElementById("numero_documento2");
+
+    numero_documento2.value = numero_documento;
+}
