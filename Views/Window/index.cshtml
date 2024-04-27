@@ -1,0 +1,31 @@
+@model IEnumerable<TurnSystem.Models.Shift>
+
+@{
+    ViewData["Title"] = "Window";
+}
+
+<h1>Turnos Atendidos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Recepcionista</th>
+            <th>Tipo de Procedimiento</th>
+            <th>Estado</th>
+            <th>Módulo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shift in Model)
+        {
+            <tr>
+                <td>@shift.shift_date</td>
+                <td>@shift.Adviser?.name</td>
+                <td>@shift.Type_Procedure?.description</td>
+                <td>@shift.Status?.description</td>
+                <td>@shift.Adviser?.Modulo</td>
+            </tr>
+        }
+    </tbody>
+</table>

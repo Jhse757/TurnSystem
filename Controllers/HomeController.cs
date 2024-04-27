@@ -93,16 +93,16 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     TempData["Type_Procedures_Selected"] = description;
     TempData.Keep("Type_Procedures_Selected");
     if(description == "Solicitud de citas"){
-        TempData["codigo"] = "SC" + ultimoRegistro.id;
+        TempData["codigo"] = "SC" + (ultimoRegistro.id + 1);
     }
     else if(description == "Pago de facturas"){
-        TempData["codigo"] = "PF" + ultimoRegistro.id;
+        TempData["codigo"] = "PF" + (ultimoRegistro.id + 1);
     }
     else if(description == "Autorizaciónes"){
-        TempData["codigo"] = "AU" + ultimoRegistro.id;
+        TempData["codigo"] = "AU" + (ultimoRegistro.id + 1);
     }
     else if(description == "Información general"){
-        TempData["codigo"] = "IG" + ultimoRegistro.id;
+        TempData["codigo"] = "IG" + (ultimoRegistro.id + 1);
     }
     
 
@@ -142,28 +142,35 @@ public IActionResult Type_Document_Selected(string description, int id, string d
 
     // Método para crear un nuevo turno y guardarlo en la base de datos
     [HttpPost]
-    public async Task<IActionResult> NewShift(String Data)
+    public async Task<IActionResult> CreateShift()
     {
     // Obtiene los valores almacenados en TempData
-    int? typeUserId = TempData["Type_Users_Selected_id"] as int?;
-    int? typeProcedureId = TempData["Type_Procedures_Selected_id"] as int?;
+    int? Type_Procedures_Selected_id = TempData["Type_Procedures_Selected_id"] as int?;
+    int? Type_Users_Selected_id = TempData["Type_Users_Selected_id"] as int?;
+    string? Document_number = TempData["Document_number"] as string;
+    string? codigo = TempData["codigo"] as string;
     DateTime now = DateTime.Now;
 
-    if (typeUserId != null || typeProcedureId != null)
-    {
-        // Si falta algún dato esencial, muestra un mensaje de error
-        TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
-        return RedirectToAction("Shift");
-    }
+if (!Type_Users_Selected_id.HasValue || !Type_Procedures_Selected_id.HasValue)
+{
+    // Si falta algún dato esencial, muestra un mensaje de error
+    TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
+    return RedirectToAction("Shift");
+}
 
-        // Crea una nueva instancia del modelo Shift
-    Shift newShift = new Shift
-    {
-        user_id = typeUserId.Value,
-        type_procedure_id = typeProcedureId.Value,
-        status_id = 1,
-        shift_date = now
-    };
+// Crear una nueva instancia del modelo Shift
+Shift newShift = new Shift
+{
+    user_id = Type_Users_Selected_id.Value,
+    adviser_id = 1,
+    type_procedure_id = Type_Procedures_Selected_id.Value,
+    status_id = 1,
+    shift_date = now,
+    type_user_id = Type_Users_Selected_id.Value,
+    document_number = Document_number,
+    codigo_turno = codigo
+};
+
 
         // Agrega el nuevo turno al _logger y guarda los cambios
         _logger.Shifts.Add(newShift);
