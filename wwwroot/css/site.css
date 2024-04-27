@@ -120,3 +120,19 @@ a {
   width: 150px;
   height: auto;
 }
+
+ /* Estilos para la tabla */
+ .table {
+  font-size: 24px; /* Tamaño de fuente grande */
+}
+
+/* Estilos para las celdas de la tabla */
+.table td,
+.table th {
+  padding: 20px; /* Espaciado grande entre celdas */
+}
+
+.img2{
+  width: 200px;
+
+}

@@ -94,15 +94,19 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     TempData.Keep("Type_Procedures_Selected");
     if(description == "Solicitud de citas"){
         TempData["codigo"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
     }
     else if(description == "Pago de facturas"){
         TempData["codigo"] = "PF" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
     }
     else if(description == "Autorizaciónes"){
         TempData["codigo"] = "AU" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
     }
     else if(description == "Información general"){
         TempData["codigo"] = "IG" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
     }
     
 
@@ -117,13 +121,14 @@ public async Task<IActionResult> Type_Documents(){
 
 
 [HttpPost]
-public IActionResult Type_Document_Selected(string description, int id, string document)
+public IActionResult Type_Document_Selected(string description, int id, string document, string document2)
     {   
         TempData["Type_Document_Selected_id"] = id;
         TempData.Keep("Type_Document_Selected_id");
         TempData["Type_Document_Selected2"] = description;
         TempData.Keep("Type_Document_Selected");
         TempData["Document_number"] = document;
+        TempData["Document_number2"] = document2;
         TempData.Keep("Document_number");
 
         return RedirectToAction("Type_Users");
@@ -164,7 +169,7 @@ Shift newShift = new Shift
     user_id = Type_Users_Selected_id.Value,
     adviser_id = 1,
     type_procedure_id = Type_Procedures_Selected_id.Value,
-    status_id = 1,
+    status_id = 5,
     shift_date = now,
     type_user_id = Type_Users_Selected_id.Value,
     document_number = Document_number,
@@ -180,6 +185,10 @@ Shift newShift = new Shift
     return RedirectToAction("Index");
 
     }   
+
+    public async Task<IActionResult> Modulo(){
+        return View(await _logger.Shifts.ToListAsync());
+    }
 }
 
 
