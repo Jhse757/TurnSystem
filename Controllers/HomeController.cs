@@ -57,6 +57,13 @@ public IActionResult Index()
         ViewBag.Type_Users = typeUserId;
         return View();
     }
+
+     public async Task<IActionResult> Type_Users()
+    
+    {
+    return View(await _logger.Type_Users.ToListAsync());
+    }
+
     //aqui se guarda que tipo de usuario es
 [HttpPost]
 public IActionResult Type_Users_Selected(string description, int id)
@@ -107,6 +114,8 @@ public async Task<IActionResult> Type_Documents(){
     return View( await _logger.Type_Documents.ToListAsync());
 }
 
+
+
 [HttpPost]
 public IActionResult Type_Document_Selected(string description, int id, string document)
     {   
@@ -117,7 +126,7 @@ public IActionResult Type_Document_Selected(string description, int id, string d
         TempData["Document_number"] = document;
         TempData.Keep("Document_number");
 
-        return RedirectToAction("Type_users");
+        return RedirectToAction("Type_Users");
     }
 // Muestra vista Privacy
     public IActionResult Privacy()
