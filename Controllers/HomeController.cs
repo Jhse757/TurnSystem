@@ -25,9 +25,7 @@ public class HomeController : Controller
     // }
 
 // Muestra vista Shift
-    public IActionResult Shift(){
-        return View( _logger.Status.ToList());
-    }
+    
 
 
 
