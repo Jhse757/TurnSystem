@@ -25,13 +25,13 @@ public class HomeController : Controller
     // }
 
 // Muestra vista Shift
-   public IActionResult Shift()
-    {
-        return View();
+    public IActionResult Shift(){
+        return View( _logger.Status.ToList());
     }
 
 
-   public IActionResult Index()
+
+public IActionResult Index()
     {
         return View();
     }
@@ -63,11 +63,28 @@ public IActionResult Type_Users_Selected(string description, int id)
 
 [HttpPost]
 public IActionResult Type_Procedures_Selected(string description, int? id)
-{
+{   
+    var ultimoRegistro = _logger.Shifts
+                .OrderByDescending(turno => turno.id)
+                .FirstOrDefault();
     TempData["Type_Procedures_Selected_id"] = id;
     TempData.Keep("Type_Procedures_Selected_id");
     TempData["Type_Procedures_Selected"] = description;
     TempData.Keep("Type_Procedures_Selected");
+    if(description == "Solicitud de citas"){
+        TempData["codigo"] = "SC" + ultimoRegistro.id;
+    }
+    else if(description == "Pago de facturas"){
+        TempData["codigo"] = "PF" + ultimoRegistro.id;
+    }
+    else if(description == "Autorizaciónes"){
+        TempData["codigo"] = "AU" + ultimoRegistro.id;
+    }
+    else if(description == "Información general"){
+        TempData["codigo"] = "IG" + ultimoRegistro.id;
+    }
+    
+
     return RedirectToAction("Shift");
 }
 
@@ -85,6 +102,7 @@ public IActionResult Type_Document_Selected(string description, int id, string d
         TempData.Keep("Type_Document_Selected");
         TempData["Document_number"] = document;
         TempData.Keep("Document_number");
+
         return RedirectToAction("Type_users");
     }
 // Muestra vista Privacy
