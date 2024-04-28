@@ -98,15 +98,15 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     }
     else if(description == "Pago de facturas"){
         TempData["codigo"] = "PF" + (ultimoRegistro.id + 1);
-        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "PF" + (ultimoRegistro.id + 1);
     }
     else if(description == "Autorizaciónes"){
         TempData["codigo"] = "AU" + (ultimoRegistro.id + 1);
-        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "AU" + (ultimoRegistro.id + 1);
     }
     else if(description == "Información general"){
         TempData["codigo"] = "IG" + (ultimoRegistro.id + 1);
-        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "IG" + (ultimoRegistro.id + 1);
     }
     
 
