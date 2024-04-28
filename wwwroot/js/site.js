@@ -9,3 +9,5 @@ function recibir() {
 
     numero_documento2.value = numero_documento;
 }
+
+
