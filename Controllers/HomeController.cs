@@ -73,21 +73,30 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     return RedirectToAction("Shift");
 }
 
+public IActionResult Type_Document_Selected(string description, int? id)
+{
+    TempData["Type_Procedures_Selected_id"] = id;
+    TempData.Keep("Type_Document_Selected_id");
+    TempData["Type_Document_Selected"] = description;
+    TempData.Keep("Type_Document_Selected");
+    return RedirectToAction("Shift");
+}
+
 //controlador para vista de cedula y usuario
 public async Task<IActionResult> Type_Documents(){
     return View( await _logger.Type_Documents.ToListAsync());
 }
 
 [HttpPost]
-public IActionResult Type_Document_Selected(string description, int id, string document)
+public IActionResult Type_Document_Selected(int? id, string document, string name)
     {   
         TempData["Type_Document_Selected_id"] = id;
         TempData.Keep("Type_Document_Selected_id");
-        TempData["Type_Document_Selected2"] = description;
+        TempData["Type_Document_Selected"] = name;
         TempData.Keep("Type_Document_Selected");
-        TempData["Document_number"] = document;
-        TempData.Keep("Document_number");
-        return RedirectToAction("Type_users");
+        TempData["Document_Name"] = document;
+        TempData.Keep("Document_Name");
+        return RedirectToAction("Shift");
     }
 // Muestra vista Privacy
     public IActionResult Privacy()
@@ -108,22 +117,24 @@ public IActionResult Type_Document_Selected(string description, int id, string d
     // Obtiene los valores almacenados en TempData
     int? typeUserId = TempData["Type_Users_Selected_id"] as int?;
     int? typeProcedureId = TempData["Type_Procedures_Selected_id"] as int?;
+    int? typeDocumentId = TempData["Type_Document_Selected_id"] as int?;
+    string documentName = TempData["Document_Name"] as string;
     DateTime now = DateTime.Now;
 
-    if (typeUserId != null || typeProcedureId != null)
-    {
-        // Si falta algún dato esencial, muestra un mensaje de error
-        TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
-        return RedirectToAction("Shift");
-    }
+    // if (!typeUserId.HasValue || !typeProcedureId.HasValue)
+    // {
+    //     TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
+    //     return RedirectToAction("Shift");
+    // }
 
         // Crea una nueva instancia del modelo Shift
     Shift newShift = new Shift
     {
         user_id = typeUserId.Value,
         type_procedure_id = typeProcedureId.Value,
-        status_id = 1,
-        shift_date = now
+        shift_date = DateTime.Now,
+        status_id = 1 
+        documentName = documentName.Value,
     };
 
         // Agrega el nuevo turno al _logger y guarda los cambios
@@ -132,7 +143,6 @@ public IActionResult Type_Document_Selected(string description, int id, string d
 
         // Redirecciona a una vista o acción adecuada después de guardar
     return RedirectToAction("Index");
-
     }   
 }
 
