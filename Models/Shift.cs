@@ -10,8 +10,8 @@ namespace TurnSystem.Models
         public string? document_number { get; set; }
         public string? codigo_turno {get; set;}
         public int type_user_id {get; set;}
-
         public DateTime shift_date { get; set; }
+        public string Estado { get; set; } = "En proceso";
         public User User { get; set; }
         public Adviser Adviser { get; set; }
         public Type_Procedure Type_Procedure { get; set; }

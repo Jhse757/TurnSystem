@@ -194,6 +194,7 @@ Shift newShift = new Shift
     public async Task<IActionResult> Modulo(){
           var shifts = await _logger.Shifts
             .Include(s => s.Adviser)
+            .Take(5)
             .ToListAsync();
 
         
