@@ -95,18 +95,22 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     if(description == "Solicitud de citas"){
         TempData["codigo"] = "SC" + (ultimoRegistro.id + 1);
         TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 1;
     }
     else if(description == "Pago de facturas"){
         TempData["codigo"] = "PF" + (ultimoRegistro.id + 1);
         TempData["codigo2"] = "PF" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 2;
     }
     else if(description == "Autorizaciónes"){
         TempData["codigo"] = "AU" + (ultimoRegistro.id + 1);
         TempData["codigo2"] = "AU" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 3;
     }
     else if(description == "Información general"){
         TempData["codigo"] = "IG" + (ultimoRegistro.id + 1);
         TempData["codigo2"] = "IG" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 4;
     }
     
 
@@ -154,6 +158,7 @@ public IActionResult Type_Document_Selected(string description, int id, string d
     int? Type_Users_Selected_id = TempData["Type_Users_Selected_id"] as int?;
     string? Document_number = TempData["Document_number"] as string;
     string? codigo = TempData["codigo"] as string;
+    int? Adviser = TempData["Adviser"] as int?;
     DateTime now = DateTime.Now;
 
 if (!Type_Users_Selected_id.HasValue || !Type_Procedures_Selected_id.HasValue)
@@ -167,7 +172,7 @@ if (!Type_Users_Selected_id.HasValue || !Type_Procedures_Selected_id.HasValue)
 Shift newShift = new Shift
 {
     user_id = Type_Users_Selected_id.Value,
-    adviser_id = 1,
+    adviser_id = Adviser.Value,
     type_procedure_id = Type_Procedures_Selected_id.Value,
     status_id = 5,
     shift_date = now,
@@ -187,8 +192,16 @@ Shift newShift = new Shift
     }   
 
     public async Task<IActionResult> Modulo(){
-        return View(await _logger.Shifts.ToListAsync());
+          var shifts = await _logger.Shifts
+            .Include(s => s.Adviser)
+            .ToListAsync();
+
+        
+        return View(shifts);
+        
     }
+
+
 }
 
 
