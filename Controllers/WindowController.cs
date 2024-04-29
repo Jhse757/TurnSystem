@@ -23,7 +23,7 @@ public class WindowController : Controller
             .Include(s => s.User)
             .Include(s => s.Type_Procedure)
             .Include(s => s.Status)
-            .Where(s => s.Status.description == "Atendiendo")
+            .Where(s => s.Status.description == "Espera")
             .ToListAsync();
 
         // Pasar los turnos a la vista
