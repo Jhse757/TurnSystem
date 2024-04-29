@@ -187,8 +187,16 @@ Shift newShift = new Shift
     }   
 
     public async Task<IActionResult> Modulo(){
-        return View(await _logger.Shifts.ToListAsync());
+          var shifts = await _logger.Shifts
+            .Include(s => s.Adviser)
+            .ToListAsync();
+
+        
+        return View(shifts);
+        
     }
+
+
 }
 
 
