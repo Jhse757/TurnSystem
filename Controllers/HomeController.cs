@@ -92,15 +92,28 @@ public IActionResult Type_Procedures_Selected(string description, int? id)
     TempData.Keep("Type_Procedures_Selected_id");
     TempData["Type_Procedures_Selected"] = description;
     TempData.Keep("Type_Procedures_Selected");
-    return RedirectToAction("Shift");
-}
+    if(description == "Solicitud de citas"){
+        TempData["codigo"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "SC" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 1;
+    }
+    else if(description == "Pago de facturas"){
+        TempData["codigo"] = "PF" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "PF" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 2;
+    }
+    else if(description == "Autorizaciónes"){
+        TempData["codigo"] = "AU" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "AU" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 3;
+    }
+    else if(description == "Información general"){
+        TempData["codigo"] = "IG" + (ultimoRegistro.id + 1);
+        TempData["codigo2"] = "IG" + (ultimoRegistro.id + 1);
+        TempData["Adviser"] = 4;
+    }
+    
 
-public IActionResult Type_Document_Selected(string description, int? id)
-{
-    TempData["Type_Procedures_Selected_id"] = id;
-    TempData.Keep("Type_Document_Selected_id");
-    TempData["Type_Document_Selected"] = description;
-    TempData.Keep("Type_Document_Selected");
     return RedirectToAction("Shift");
 }
 
@@ -112,15 +125,17 @@ public async Task<IActionResult> Type_Documents(){
 
 
 [HttpPost]
-public IActionResult Type_Document_Selected(int? id, string document, string name)
+public IActionResult Type_Document_Selected(string description, int id, string document, string document2)
     {   
         TempData["Type_Document_Selected_id"] = id;
         TempData.Keep("Type_Document_Selected_id");
-        TempData["Type_Document_Selected"] = name;
+        TempData["Type_Document_Selected2"] = description;
         TempData.Keep("Type_Document_Selected");
-        TempData["Document_Name"] = document;
-        TempData.Keep("Document_Name");
-        return RedirectToAction("Shift");
+        TempData["Document_number"] = document;
+        TempData["Document_number2"] = document2;
+        TempData.Keep("Document_number");
+
+        return RedirectToAction("Type_Users");
     }
 // Muestra vista Privacy
     public IActionResult Privacy()
@@ -139,27 +154,33 @@ public IActionResult Type_Document_Selected(int? id, string document, string nam
     public async Task<IActionResult> CreateShift()
     {
     // Obtiene los valores almacenados en TempData
-    int? typeUserId = TempData["Type_Users_Selected_id"] as int?;
-    int? typeProcedureId = TempData["Type_Procedures_Selected_id"] as int?;
-    int? typeDocumentId = TempData["Type_Document_Selected_id"] as int?;
-    string documentName = TempData["Document_Name"] as string;
+    int? Type_Procedures_Selected_id = TempData["Type_Procedures_Selected_id"] as int?;
+    int? Type_Users_Selected_id = TempData["Type_Users_Selected_id"] as int?;
+    string? Document_number = TempData["Document_number"] as string;
+    string? codigo = TempData["codigo"] as string;
+    int? Adviser = TempData["Adviser"] as int?;
     DateTime now = DateTime.Now;
 
-    // if (!typeUserId.HasValue || !typeProcedureId.HasValue)
-    // {
-    //     TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
-    //     return RedirectToAction("Shift");
-    // }
+if (!Type_Users_Selected_id.HasValue || !Type_Procedures_Selected_id.HasValue)
+{
+    // Si falta algún dato esencial, muestra un mensaje de error
+    TempData["Error"] = "No se pudo obtener el tipo de usuario o el tipo de procedimiento.";
+    return RedirectToAction("Shift");
+}
 
-        // Crea una nueva instancia del modelo Shift
-    Shift newShift = new Shift
-    {
-        user_id = typeUserId.Value,
-        type_procedure_id = typeProcedureId.Value,
-        shift_date = DateTime.Now,
-        status_id = 1 
-        documentName = documentName.Value,
-    };
+// Crear una nueva instancia del modelo Shift
+Shift newShift = new Shift
+{
+    user_id = Type_Users_Selected_id.Value,
+    adviser_id = Adviser.Value,
+    type_procedure_id = Type_Procedures_Selected_id.Value,
+    status_id = 5,
+    shift_date = now,
+    type_user_id = Type_Users_Selected_id.Value,
+    document_number = Document_number,
+    codigo_turno = codigo
+};
+
 
         // Agrega el nuevo turno al _logger y guarda los cambios
         _logger.Shifts.Add(newShift);
@@ -167,6 +188,7 @@ public IActionResult Type_Document_Selected(int? id, string document, string nam
 
         // Redirecciona a una vista o acción adecuada después de guardar
     return RedirectToAction("Index");
+
     }   
 
     public async Task<IActionResult> Modulo(){

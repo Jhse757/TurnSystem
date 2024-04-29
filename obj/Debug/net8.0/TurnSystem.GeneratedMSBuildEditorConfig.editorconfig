@@ -9,67 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TurnSystem
 build_property.RootNamespace = TurnSystem
-build_property.ProjectDir = C:\Users\WINDOWS 11\Desktop\TurnSystem\
+build_property.ProjectDir = C:\Users\dekla\Desktop\proyecto\TurnSystem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\WINDOWS 11\Desktop\TurnSystem
+build_property.MSBuildProjectDirectory = C:\Users\dekla\Desktop\proyecto\TurnSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Dashboard/index.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Dashboard/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Index.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Document.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Modulo.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Modulo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2R1bG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Privacy.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Shift.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Shift.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGlmdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Type_Documents.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Type_Documents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUeXBlX0RvY3VtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Type_Procedures.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Type_Procedures.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUeXBlX1Byb2NlZHVyZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Home/Type_Users.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Home/Type_Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUeXBlX1VzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Shared/Error.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Window/index.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Window/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZG93XGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/_ViewImports.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/_ViewStart.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/WINDOWS 11/Desktop/TurnSystem/Views/Shared/_Layout.cshtml]
+[C:/Users/dekla/Desktop/proyecto/TurnSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tbz26zw9t2
