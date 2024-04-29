@@ -17,7 +17,19 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-   public IActionResult Index()
+// Muestra vista Index
+
+    // public async Task<IActionResult> Index()
+    // {
+    //     return View(await _logger.Type_Users.ToListAsync());
+    // }
+
+// Muestra vista Shift
+    
+
+
+
+public IActionResult Index()
     {
         return View();
     }
@@ -45,6 +57,13 @@ public class HomeController : Controller
         ViewBag.Type_Users = typeUserId;
         return View();
     }
+
+     public async Task<IActionResult> Type_Users()
+    
+    {
+    return View(await _logger.Type_Users.ToListAsync());
+    }
+
     //aqui se guarda que tipo de usuario es
 [HttpPost]
 public IActionResult Type_Users_Selected(string description, int id)
@@ -65,7 +84,10 @@ public IActionResult Type_Users_Selected(string description, int id)
 
 [HttpPost]
 public IActionResult Type_Procedures_Selected(string description, int? id)
-{
+{   
+    var ultimoRegistro = _logger.Shifts
+                .OrderByDescending(turno => turno.id)
+                .FirstOrDefault();
     TempData["Type_Procedures_Selected_id"] = id;
     TempData.Keep("Type_Procedures_Selected_id");
     TempData["Type_Procedures_Selected"] = description;
@@ -86,6 +108,8 @@ public IActionResult Type_Document_Selected(string description, int? id)
 public async Task<IActionResult> Type_Documents(){
     return View( await _logger.Type_Documents.ToListAsync());
 }
+
+
 
 [HttpPost]
 public IActionResult Type_Document_Selected(int? id, string document, string name)
@@ -112,7 +136,7 @@ public IActionResult Type_Document_Selected(int? id, string document, string nam
 
     // Método para crear un nuevo turno y guardarlo en la base de datos
     [HttpPost]
-    public async Task<IActionResult> NewShift(String Data)
+    public async Task<IActionResult> CreateShift()
     {
     // Obtiene los valores almacenados en TempData
     int? typeUserId = TempData["Type_Users_Selected_id"] as int?;
@@ -144,6 +168,18 @@ public IActionResult Type_Document_Selected(int? id, string document, string nam
         // Redirecciona a una vista o acción adecuada después de guardar
     return RedirectToAction("Index");
     }   
+
+    public async Task<IActionResult> Modulo(){
+          var shifts = await _logger.Shifts
+            .Include(s => s.Adviser)
+            .ToListAsync();
+
+        
+        return View(shifts);
+        
+    }
+
+
 }
 
 

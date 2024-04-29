@@ -3,71 +3,87 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Barra lateral izquierda -->
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Título</h2>
-                    </div>
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-block mb-2">Botón 1</a>
-                        <a href="#" class="btn btn-secondary btn-block">Botón 2</a>
-                    </div>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Barra lateral izquierda -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Título</h2>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary btn-block mb-2">Botón 1</a>
+                    <a href="#" class="btn btn-secondary btn-block">Botón 2</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Contenido principal -->
-            <div class="col-md-9">
-                <!-- Sección para mostrar el primer turno -->
-                <h3>Primer turno:</h3>
-                @if (ViewData["FirstShift"] != null)
-                {
-                    var firstShift = (TurnSystem.Models.Shift)ViewData["FirstShift"];
+        <!-- Contenido principal -->
+        <div class="col-md-9">
+            <!-- Sección para mostrar el primer turno -->
+            <h3>Primer turno:</h3>
+            @if (ViewData["FirstShift"] != null)
+            {
+                var firstShift = (TurnSystem.Models.Shift)ViewData["FirstShift"];
 
-                    <dl class="row">
-                        <dt class="col-sm-2">Fecha</dt>
-                        <dd class="col-sm-10">@firstShift.shift_date</dd>
+                <dl class="row">
+                    <dt class="col-sm-2">Fecha</dt>
+                    <dd class="col-sm-10">@firstShift.shift_date</dd>
 
-                        <dt class="col-sm-2">Recepcionista</dt>
-                        <dd class="col-sm-10">@firstShift.Adviser?.name</dd>
+                    <dt class="col-sm-2">Recepcionista</dt>
+                    <dd class="col-sm-10">@firstShift.Adviser?.name</dd>
 
-                        <dt class="col-sm-2">Tipo de Procedimiento</dt>
-                        <dd class="col-sm-10">@firstShift.Type_Procedure?.description</dd>
+                    <dt class="col-sm-2">Tipo de Procedimiento</dt>
+                    <dd class="col-sm-10">@firstShift.Type_Procedure?.description</dd>
 
-                        <dt class="col-sm-2">Estado</dt>
-                        <dd class="col-sm-10">@firstShift.Status?.description</dd>
-                    </dl>
-                }
+                    <dt class="col-sm-2">Estado</dt>
+                    <dd class="col-sm-10">@firstShift.Status?.description</dd>
+                </dl>
 
-                <!-- Sección para mostrar la lista de todos los turnos -->
-                <h3>Lista de todos los turnos:</h3>
-                <table class="table table-striped">
-                    <thead>
+                <div class="row mb-4">
+                    <div class="col">
+                        <!-- Utiliza una fila para organizar los botones -->
+                        <div class="row">
+                            <div class="col">
+                                <form method="post" asp-action="CallFirstShift">
+                                    <button type="submit" class="btn btn-success">Llamar</button>
+                                </form>
+                            </div>
+
+                            <div class="col">
+                                <form method="post" asp-action="DeleteFirstRecord">
+                                    <button type="submit" class="btn btn-danger">Finalizar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+            <!-- Sección para mostrar la lista de todos los turnos -->
+            <h3>Lista de todos los turnos:</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Recepcionista</th>
+                        <th>Tipo de Procedimiento</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var shift in Model)
+                    {
                         <tr>
-                            <th>Fecha</th>
-                            <th>Paciente</th>
-                            <th>Recepcionista</th>
-                            <th>Tipo de Procedimiento</th>
-                            <th>Estado</th>
+                            <td>@shift.shift_date</td>
+                            <td>@shift.Adviser?.name</td>
+                            <td>@shift.Type_Procedure?.description</td>
+                            <td>@shift.Status?.description</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var shift in Model)
-                        {
-                            <tr>
-                                <td>@shift.shift_date</td>
-                                <td>@shift.User?.document_number</td>
-                                <td>@shift.Adviser?.name</td>
-                                <td>@shift.Type_Procedure?.description</td>
-                                <td>@shift.Status?.description</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-
+</div>
